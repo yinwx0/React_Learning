@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07_彩虹文本练习</title>
+    <style>
+      .rainbow-button:hover {
+        background-color: #e0e0e0;
+      }
+      .hidden-achievement {
+        color: gold;
+        font-size: 20px;
+        margin-top: 20px;
+        display: none;
+      }
+      .hidden-achievement.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      const colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+      ];
+
+      function App() {
+        const [count, setCount] = React.useState(0);
+        const [colorIndex, setColorIndex] = React.useState(-1);
+        const [showAchievement, setShowAchievement] = React.useState(false);
+
+        const handleClick = () => {
+          const newCount = count + 1;
+          setCount(newCount);
+
+          // 更新颜色索引
+          const newColorIndex = (colorIndex + 1) % colors.length;
+          setColorIndex(newColorIndex);
+
+          // 如果点击超过 10 次，显示隐藏成就
+          if (newCount > 10) {
+            setShowAchievement(true);
+          }
+        };
+
+        return (
+          <div>
+            <div
+              className="message"
+              style={{ color: count === 0 ? "black" : colors[colorIndex] }}
+            >
+              你已经点击了 {count} 次
+            </div>
+            <button className="rainbow-button" onClick={handleClick}>
+              点我变彩虹色 🌈
+            </button>
+            {showAchievement && (
+              <div className="hidden-achievement show">
+                你触发隐藏成就：彩虹大师！
+              </div>
+            )}
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
