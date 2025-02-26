@@ -1,0 +1,18 @@
+.book-detail {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-item {
+  margin: 15px 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}

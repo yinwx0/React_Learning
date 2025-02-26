@@ -1,0 +1,12 @@
+.card-header {
+  background-color: red;
+  width: 20%;
+}
+.card-body {
+  background-color: green;
+  width: 20%;
+}
+.card-footer {
+  background-color: blue;
+  width: 20%;
+}
