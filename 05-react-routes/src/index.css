@@ -1,0 +1,38 @@
+/* index.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+nav {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  gap: 10px; /* 设置按钮之间的间距 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加导航栏的轻微阴影 */
+}
+
+/* 基础链接样式 */
+.nav-link {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none; /* 默认去掉下划线 */
+  font-size: 14px;
+  background-color: #f0f0f0; /* 默认背景色 */
+  border-radius: 4px; /* 圆角 */
+  transition: all 0.3s ease; /* 平滑过渡 */
+}
+
+/* 激活链接样式 */
+.nav-link.active {
+  color: #007bff; /* 高亮颜色 */
+  text-decoration: underline; /* 下划线 */
+  font-weight: bold; /* 加粗 */
+  background-color: #e0f0ff; /* 激活背景色 */
+}
+
+/* 悬停效果 */
+.nav-link:hover {
+  background-color: #d0e0f0; /* 悬停背景色 */
+}
