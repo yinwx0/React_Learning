@@ -1,0 +1,39 @@
+.account-book {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .balance {
+      font-size: 18px;
+      color: #333;
+    }
+  }
+
+  .at-button {
+    margin: 20px 0;
+  }
+
+  .at-list__item {
+    .at-list__item-extra {
+      &.expense {
+        color: #ff4949;
+      }
+      &.income {
+        color: #13ce66;
+      }
+    }
+  }
+
+  .at-float-layout__container {
+    padding: 20px;
+  }
+}
